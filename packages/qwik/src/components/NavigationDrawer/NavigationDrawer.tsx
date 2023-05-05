@@ -1,28 +1,42 @@
 import { component$ } from "@builder.io/qwik";
-import { P } from "drizzle-orm/column.d-8b137277";
 
-export default component$(() => {
+type Props = {
+    heading?: string;
+    subHeading?: string;
+    items: Array<{
+        icon?: string;
+        label: string;
+        badge?: number;
+    }>
+}
+
+export default component$(({ heading, subHeading, items }: Props) => {
     return (
-        <nav class="flex flex-start p-4 w-[360px] h-screen bg-surface-container-low shadow-level1 rounded-r-large md:shadow-level0 md:surface box-border">
-            <div title="heading" class='flex flex-col justify-center items-start w-[336px] p-2 pl-4 gap-[10px] box-border'>
-                <p class='w-[312px] h-[20px] title-small flex items-center box-border'></p>
+        <nav class="shadow-level1 rounded-r-large md:shadow-level0 md:surface box-border flex h-screen w-[360px] flex-col items-start bg-surface-container-low p-4">
+  <div title="heading" class="box-border flex w-[336px] flex-col items-start justify-center gap-[10px] p-2 pl-4">
+    <p class="title-small box-border flex h-[20px] w-[312px] items-center">{heading}</p>
+  </div>
+  <div title="sub-heading" class="box-border flex h-[56px] w-[336px] items-center rounded-full px-4 py-[18px]">
+    <div class="flex h-[20px] w-[98px] items-center gap-[12px]">
+      <p class="title-small h-[20px] w-[98px] text-on-surface-variant">{subHeading}</p>
+    </div>
+  </div>
+  <ul class="">
+    {
+        items.map(item => (
+          <li class="flex h-[56px] w-[336px] items-center rounded-[100px] active:bg-secondary-container">
+            <div class="flex h-[56px] w-[336px] items-center p-4 pr-6">
+              <button class="flex h-[56px] items-center px-4 pr-6">
+                {item.icon}
+              </button>
+              <p class="label-large h-[20px] w-[216px] text-on-secondary-container">{item.label}</p>
+              <p title="badge" class="label-large h-5 w-8 text-on-secondary-container text-right">{item.badge}</p>
             </div>
-            <div title="sub-heading" class='flex items-center py-[18px] px-8 rounded-[100px] w-[336px] h-[56px] box-border'>
-                <div class='flex items-center gap-[12px] w-[98px] h-[20px]'>
-                    <p class='w-[98px] h-[20px] title-small text-on-surface-variant'></p>
-                </div>
-            </div>
-            <ul>
-                <li class='flex items-center w-[336px] h-[56px] bg-secondary-container rounded-[100px] '>
-                    <div class='flex items-center p-4 pr-6 w-[336px] h-[56px] '>
-                        <i class='w-6 h-6'>
-                            <svg class='absolute bg-on-secondary-container'></svg>
-                        </i>
-                        <p class='w-[216px] h-[20px] label-large bg-on-secondary-container'></p>
-                        <p title="badge" class='w-8 h-5 label-large bg-on-secondary-container text-right'></p>
-                    </div>
-                </li>
-            </ul>
-        </nav>       
+          </li>
+        ))
+    }
+  </ul>
+</nav>
+       
     )
 });
