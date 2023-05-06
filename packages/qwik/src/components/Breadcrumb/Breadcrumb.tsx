@@ -1,10 +1,10 @@
 import { component$ } from '@builder.io/qwik';
 
 type breadcrumbProps = {
-    props: Array<{
+    props: {
         label: string;
         href: string;
-    }>
+    }[]
 }
 
 export default component$(({ props }: breadcrumbProps) => {
@@ -27,7 +27,7 @@ export default component$(({ props }: breadcrumbProps) => {
     {
       props.map((item, index) => {
         if(index !== props.length - 1)
-          (
+          return (
             <li key={index}>
               <div class="flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -38,7 +38,7 @@ export default component$(({ props }: breadcrumbProps) => {
             </li>
           )
         else
-          (
+          return (
             <li aria-current="page" key={index}>
               <div class="flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">

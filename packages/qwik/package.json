@@ -67,11 +67,14 @@
     "wrangler": "latest"
   },
   "dependencies": {
+    "@algolia/client-search": "^4.17.0",
     "@octokit/core": "^4.2.0",
     "@planetscale/database": "^1.7.0",
+    "algoliasearch": "^4.17.0",
     "ckeditor5-custom-build": "file:../ckeditor-comment",
     "drizzle-orm": "^0.25.4",
     "flatpickr": "^4.6.13",
+    "instantsearch.js": "^4.55.0",
     "jimp": "^0.22.7",
     "monaco-editor": "^0.38.0",
     "mysql2": "^3.2.4",
