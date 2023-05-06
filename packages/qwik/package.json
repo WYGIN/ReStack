@@ -69,8 +69,11 @@
   "dependencies": {
     "@octokit/core": "^4.2.0",
     "@planetscale/database": "^1.7.0",
+    "ckeditor5-custom-build": "file:../ckeditor-comment",
     "drizzle-orm": "^0.25.4",
+    "flatpickr": "^4.6.13",
     "jimp": "^0.22.7",
+    "monaco-editor": "^0.38.0",
     "mysql2": "^3.2.4",
     "zod": "^3.21.4"
   }
