@@ -36,6 +36,7 @@
     "@playwright/test": "^1.32.3",
     "@storybook/addon-essentials": "7.0.7",
     "@storybook/addon-links": "7.0.7",
+    "@storybook/addon-styling": "^1.0.6",
     "@storybook/blocks": "7.0.7",
     "@storybook/builder-vite": "7.0.7",
     "@storybook/html": "7.0.7",
@@ -69,15 +70,23 @@
   "dependencies": {
     "@algolia/client-search": "^4.17.0",
     "@octokit/core": "^4.2.0",
-    "@planetscale/database": "^1.7.0",
+    "@planetscale/database": "1.6.0",
+    "@storybook/addon-a11y": "^7.0.9",
+    "@storybook/addon-interactions": "^7.0.9",
+    "@storybook/addon-storysource": "^7.0.9",
+    "@storybook/jest": "^0.1.0",
+    "@storybook/react": "^7.0.9",
+    "@storybook/testing-library": "^0.1.0",
     "algoliasearch": "^4.17.0",
     "ckeditor5-custom-build": "file:../ckeditor-comment",
     "drizzle-orm": "^0.25.4",
+    "drizzle-pscale-adapter": "file:../drizzle-pscale-adapter",
     "flatpickr": "^4.6.13",
     "instantsearch.js": "^4.55.0",
     "jimp": "^0.22.7",
     "monaco-editor": "^0.38.0",
-    "mysql2": "^3.2.4",
+    "mysql2": "^3.3.0",
+    "nanoid": "^4.0.2",
     "zod": "^3.21.4"
   }
 }
