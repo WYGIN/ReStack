@@ -1,0 +1,27 @@
+{
+  "name": "drizzle-pscale-adapter",
+  "version": "1.0.0",
+  "description": "an Adapter for Auth.js database authenthication for planetscale",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Auth.js",
+    "Authjs",
+    "Drizzle-ORM",
+    "Drizzle-Kit",
+    "Planet-Scale"
+  ],
+  "author": "WYGIN",
+  "license": "ISC",
+  "dependencies": {
+    "@auth/core": "^0.7.1",
+    "drizzle-orm": "^0.25.4",
+    "mysql2": "^3.3.0",
+    "nanoid": "^4.0.2"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.17.6"
+  }
+}
