@@ -1,6 +1,6 @@
-import type { StorybookConfig } from "storybook-framework-qwik";
-const config: StorybookConfig = {
-  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+/** @type { import('storybook-framework-qwik').StorybookConfig } */
+const config = {
+  stories: ["../stories/**/*.mdx", "../stories/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",

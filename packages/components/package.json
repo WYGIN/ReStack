@@ -4,7 +4,9 @@
   "description": "components made with tailwind css with material 3 guidelines",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "keywords": [
     "tailwind-css",
@@ -17,5 +19,19 @@
   "dependencies": {
     "@builder.io/qwik": "^1.0.0",
     "@builder.io/qwik-city": "^1.0.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.0.9",
+    "@storybook/addon-interactions": "^7.0.9",
+    "@storybook/addon-links": "^7.0.9",
+    "@storybook/blocks": "^7.0.9",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.23",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.0.9",
+    "storybook-framework-qwik": "^0.2.0",
+    "tailwindcss": "^3.3.2"
   }
 }
